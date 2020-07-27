@@ -1,0 +1,340 @@
+/*
+Theme Name: philippe
+Theme URI: https://github.com/Philpof/integration-template-faun
+Author: Olivier Prieur
+Author URI: https://www.tutowp.fr/tutowp
+Description: fait avec amour et passion !
+Version: 1.0
+*/
+
+:root {
+font-size: 6px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #222222;
+  font-family: 'Oswald', sans-serif;
+}
+
+/* ----- NavBar ----- */
+.dropdown-menu {
+  background-color: inherit;
+  border: none;
+}
+
+.dropdown-item {
+  border-radius: 1rem;
+  color: #999999;
+}
+
+#faunNav {
+  color: #fefefe;
+  font-size: 2rem;
+}
+
+/* ----- Vertical Nav ----- */
+.icon-bar {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 1vw;
+}
+
+.icon-bar a {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  text-align: center;
+  transition: all 0.5s ease;
+  color: #757575;
+  font-size: 1.5rem;
+}
+
+.icon-bar a:hover {
+  background-color: auto;
+  color: #fefefe; /* le chiffre change de couleur */
+  text-decoration: none; /* enlève le trait sous le chiffre */
+}
+
+.effetBar:hover {
+  align-items: center;
+  display: flex;
+  text-align: center;
+}
+
+.effetBar:before,
+.effetBar:after {
+    color: #757575;
+    border-top: 0.05em solid;
+    content: "";/* nécessaire pour afficher les pseudo-éléments */
+    flex: 1;/* partage le reste de la largeur disponible */
+    margin: 0.5em;/* espace les traits du texte */
+}
+
+/* ----- Section n°1 ----- */
+#section1 {
+  background-image: url("img/faun_template_BG_TOP_Final.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 15rem;
+}
+
+#musicMore {
+ padding-top: 10rem;
+ padding-bottom: 1rem;
+}
+
+#safe {
+  color: #999999;
+  font-size: 6rem;
+  line-height: 6rem;
+  padding-bottom: 1rem;
+}
+
+#music {
+  color: #ed1f34;
+  font-size: 10rem;
+  opacity: 0.6;
+  margin-left: -0.5rem;
+  line-height: 6rem;
+}
+
+#high {
+  color: #fefefe;
+  font-size: 5rem;
+  line-height: 8rem;
+  margin-left: -0.2rem;
+}
+
+#viewMore {
+  font-size: 1.5rem;
+  margin: 1rem;
+
+}
+
+/* ----- Section n°2 ----- */
+#section2 {
+  background-color: #fefefe;
+}
+
+#outUs {
+  color: #999999;
+  font-size: 20rem;
+  opacity: 0.2;
+  margin-top: -2rem;
+  margin-bottom: -15rem;
+  margin-left: -6rem;
+}
+
+#about {
+  margin-right: 5rem;
+  padding-right: 10rem;
+  padding-left: 15rem;
+}
+
+#aboutUs {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+#loremA {
+  line-height: 2rem;
+  color: #999999;
+  margin-bottom: 3rem;
+}
+
+#checkOur {
+  font-size: 1rem;
+  text-align: center;
+  margin: 0.5rem;
+}
+
+#abo {
+  width: 465px;
+  color: #999999;
+  font-size: 25rem;
+  opacity: 0.2;
+  margin-top: -5rem;
+  margin-bottom: -23rem;
+  margin-right: -37rem;
+  overflow: hidden;
+}
+
+#imgConcert{
+  box-shadow: 0em 0 6em grey;
+  margin-right: 15rem;
+}
+
+#concert {
+  color: #ed1f34;
+  font-size: 8rem;
+  margin-top: -6rem;
+  margin-bottom: 3rem;
+  margin-left: 20rem;
+}
+
+/* ----- Section n°3 ----- */
+#section3 {
+  background: url("img/faun_template_Main-photo-BG_VIDEO.webp");
+  background-size: cover;
+  background-position: center fixed;
+  background-repeat: no-repeat;
+}
+
+#player {
+  align-items: center;
+  padding-left: 12rem;
+}
+
+#elipsePlay {
+  position: relative;
+  z-index:2;
+}
+#elipsePlayRed {
+  position: relative;
+  z-index:2;
+}
+
+#playClic img:last-child {
+  display: none;
+}
+#playClic:hover img:last-child {
+  display: block;
+}
+#playClic:hover img:first-child {
+  display: none;
+}
+
+
+#elipseL {
+  position: absolute;
+  z-index:1;
+}
+
+#elipseM {
+  position: absolute;
+  z-index:1;
+}
+
+#elipseS {
+  position: absolute;
+  z-index:1;
+}
+
+#video {
+  color: #ed1f34;
+  font-size: 5rem;
+  opacity: 0.65;
+}
+
+#loremB {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #999999;
+  margin-right: 4rem;
+  padding-right: 1rem;
+}
+
+#progress {
+background-color: #444444;
+
+}
+
+#progressBar {
+ background-color: #ed1f34;
+}
+
+/* ----- Section n°4 ----- */
+#section4 {
+  background: url("img/faun_template_Photo_BOTTOM.webp") fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 15rem;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+  #barrePhotos {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  #wantTo {
+    padding-top: 15rem;
+    padding-bottom: 1.5rem;
+    font-size: 3rem;
+    color: #fefefe
+  }
+
+  #loremC {
+    padding-top: 0.5rem;
+    padding-bottom: 3rem;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    color: #999999;
+  }
+
+  #contactUs {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+/* ----- Footer ----- */
+#footer {
+  margin-top: 5rem;
+  margin-bottom: 6rem;
+}
+
+  #faun {
+    color: #fefefe;
+    font-size: 2rem;
+    margin-bottom: -0.7rem;
+  }
+
+  #allRights {
+    color: #444444;
+    font-size: 1.5rem;
+  }
+
+/* ----- Page "noway" pour tester les liens ----- */
+#containerNoWay {
+  background-color: #fefefe;
+  margin-top: 10rem;
+  padding-bottom: 10rem;
+}
+
+@media (min-width: 576px) {
+  :root {
+  font-size: 8px;
+  }
+
+}
+
+@media (min-width: 768px) {
+  :root {
+  font-size: 10px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  :root {
+  font-size: 12px;
+  }
+
+}
+
+@media (min-width: 1200px) {
+  :root {
+  font-size: 14px;
+  }
+
+}
+
+@media (min-width: 1500px) {
+
+}
