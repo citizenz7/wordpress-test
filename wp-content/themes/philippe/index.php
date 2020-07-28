@@ -14,7 +14,7 @@
       </button>
       <div class="dropdown-menu"  >
         <a class="dropdown-item" href="index.php#section1">Us</a>
-        <a class="dropdown-item" href="index.php#section2">Concerts</a>
+        <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</a>
         <a class="dropdown-item" href="index.php#section3">Videos</a>
         <a class="dropdown-item" href="index.php#section4">Contact</a>
       </div>

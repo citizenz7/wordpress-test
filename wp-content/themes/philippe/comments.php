@@ -19,6 +19,7 @@
     </ol>
 <?php endif; ?>
 
+
 <?php if(comments_open()) : ?>
 	<h2>Ajouter un commentaire</h2>
     <?php if(get_option('comment_registration') && !$user_ID) : ?>
@@ -41,7 +42,7 @@
                 </div>
             <?php endif; ?>
             <div class="form-group">
-              <textarea name="comment" id="comment" rows="10" cols="10" tabindex="4"></textarea>
+              <textarea name="comment" id="comment" rows="10" cols="120" tabindex="4"></textarea>
               <p><label for="comment">Votre texte</label></p>
             </div>
             <?php //show_subscription_checkbox(); ?>

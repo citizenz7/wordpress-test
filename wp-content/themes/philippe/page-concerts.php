@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: Modèle de Page Concerts
+*/
+?>
+
 <?php get_header(); ?>
 
 <!-- Section 1 -->
@@ -10,11 +16,11 @@
 
     <div class="dropdown">
       <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="img/faun_template_3TRAITS.webp" alt="Menu">
+        <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3TRAITS.webp" alt="Menu">
       </button>
-      <div class="dropdown-menu"  >
+      <div class="dropdown-menu" >
         <a class="dropdown-item" href="index.php#section1">Us</a>
-        <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</a>
+        <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</<?php bloginfo('template_directory'); ?>a>
         <a class="dropdown-item" href="index.php#section3">Videos</a>
         <a class="dropdown-item" href="index.php#section4">Contact</a>
       </div>
@@ -24,7 +30,7 @@
 
     <div class="dropdown">
       <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <img src="img/faun_template_LOUPE.webp" alt="Recherche">
+        <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_LOUPE.webp" alt="Recherche">
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <form class="form-inline">
@@ -75,28 +81,24 @@
         <!-- <div id="outUs">out us</div> -->
         <div id="about" class="container-fluid px-3 py-3">
 
-          <main class="wrap">
-            <section class="content-area content-full-width">
-              <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-              <article class="article-full">
-                <header>
-                  <h2><?php the_title(); ?></h2>
-                  <p class="post-info">
-                    Posté le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?>.
-                  </p>
-                </header>
-                <?php the_content(); ?>
-              </article>
-            <?php endwhile; else : ?>
-              <article>
-                <p>Sorry, no post was found!</p>
-              </article>
-            <?php endif; ?>
-          </section>
-          <div class="post-comments">
-            <?php comments_template(); ?>
-          </div>
-        </main>
+        <?php
+          query_posts(array(
+            'post_type' => 'concerts',
+            'showposts' => 10
+          ) );
+        ?>
+
+        <?php
+          while (have_posts()) : the_post(); ?>
+            <div class="concerts">
+
+                <div class="text">
+                  <h2><b><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></b></h2>
+                  <p><i>Concert proposé par : <?php the_author(); ?></i></p>
+                  <p><?php echo get_the_excerpt(); ?></p>
+                </div>
+              </div>
+        <?php endwhile;?>
 
 
         </div>
