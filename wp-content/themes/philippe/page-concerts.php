@@ -94,8 +94,9 @@ Template Name: Modèle de Page Concerts
 
                 <div class="text">
                   <h2><b><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></b></h2>
-                  <p><i>Concert proposé par : <?php the_author(); ?></i></p>
+                  <p><i>Concert proposé le <?php the_time('d/m/Y'); ?>, par <?php the_author(); ?></i></p>
                   <p><?php echo get_the_excerpt(); ?></p>
+                  <p class="text-right"><a href="<?php the_permalink(); ?>"><i class="fas fa-angle-double-right"></i> Lire la suite</a></p>
                 </div>
               </div>
         <?php endwhile;?>
