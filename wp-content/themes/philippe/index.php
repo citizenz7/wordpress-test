@@ -85,8 +85,10 @@
               <?php while(have_posts()) : the_post(); ?>
               <article>
                 <p id="aboutUs" class="d-flex"><?php the_title(); ?></p>
-                <p>Publié le <?php the_time('d/m/Y'); ?><?php if(!is_page()) : ?> dans <?php the_category(', '); ?>, par <?php the_author(); ?><?php endif; ?></p>
-                <p style="font-size:11px;"><?php echo wpb_comment_count(); ?></p>
+                <p>Publié le <?php the_time('d/m/Y'); ?><?php if(!is_page()) : ?> dans <?php the_category(', '); ?>, par <?php the_author(); ?><?php endif; ?>
+                <p style="font-size:11px;">
+                  <?php comments_popup_link('Aucun commentaire pour cet article »', '1 commentaire pour cet article »', '% commentaires pour cet article »'); ?>
+                </p>
                 <?php if(is_singular()) : ?>
                 <?php the_content(); ?>
                 <?php else : ?>
@@ -104,9 +106,15 @@
           <p>Aucun résultat</p>
         <?php endif; ?>
 
-
             <p class="pt-5"><a href="noway.php" class="btn btn-outline-secondary font-weight-bold mb-5 "><span id="checkOur">check our tour</span></a></p>
         </div>
+
+        <?php
+        if (function_exists("awepop_popularity_list")) {
+          awepop_popularity_list();
+        }
+        ?>
+
         </div>
       </div>
     </div>
