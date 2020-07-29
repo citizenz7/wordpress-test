@@ -28,7 +28,7 @@ define( 'DB_NAME', 'olivierp_wordpress' );
 define( 'DB_USER', 'olivierp' );
 
 /** Mot de passe de la base de données MySQL. */
-define( 'DB_PASSWORD', 'o2PT1rEN6RHWqg==' );
+define( 'DB_PASSWORD', 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx' );
 
 /** Adresse de l’hébergement MySQL. */
 define( 'DB_HOST', 'localhost' );
