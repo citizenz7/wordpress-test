@@ -1,5 +1,7 @@
 <div class="text-center pt-5">
-  <a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a>
+  <a href="<?php bloginfo('wpurl'); ?>">Accueil</a> <span class="text-white">|</span> 
+  <a href="<?php bloginfo('wpurl'); ?>/wp-admin/">Admin</a> <span class="text-white">|</span> 
+  <a href="<?php bloginfo('wpurl'); ?>/politique-de-confidentialite">Politique de confidentialité</a>
 </div>
 
 <?php wp_footer(); ?>
