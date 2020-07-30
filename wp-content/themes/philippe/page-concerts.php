@@ -19,11 +19,11 @@ Template Name: Modèle de Page Concerts
         <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3TRAITS.webp" alt="Menu">
       </button>
       <div class="dropdown-menu" >
-        <a class="dropdown-item" href="index.php#section1">Us</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section1">Us</a>
         <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</<?php bloginfo('template_directory'); ?>a>
-        <a class="dropdown-item" href="index.php#section3">Videos</a>
-        <a class="dropdown-item" href="index.php?page_id=63">Archives</a>
-        <a class="dropdown-item" href="index.php#section4">Contact</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section3">Videos</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php?page_id=63">Archives</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section4">Contact</a>
       </div>
     </div>
 
@@ -105,72 +105,9 @@ Template Name: Modèle de Page Concerts
       </div>
     </div>
 
-    <!-- <div class="container col col-md-6 col-sm-12 d-flex flex-column justify-content-center align-items-center">
-      <div id="abo" class="font-weight-bold text-uppercase">abo</div>
-      <img src="img/faun_template_Photo_ABOUTUS.webp" alt="Photo Concert" class="img-fluid" id="imgConcert">
-      <div id="concert" class="font-weight-bold text-uppercase">concert</div>
-    </div> -->
-
   </div>
 
 </div>
-
-<!-- Section 3 -->
-<!-- <div id="section3" class="d-flex vh-100 container-fluid">
-
-  <div id="player" class="col-3 d-flex justify-content-center">
-    <a id="playClic" href="https://www.youtube.com/watch?v=C_ijc7A5oAc" target="_blank"><img id="elipsePlay" src="img/faun_template_Player.webp" alt="Play"><img id="elipsePlayRed" src="img/faun_template_PlayerRed.webp" alt="Play"></a>
-
-    <img src="img/faun_template_ElipseL.webp" alt="Elipse Large" id="elipseL">
-    <img src="img/faun_template_ElipseM.webp" alt="Elipse Medium" id="elipseM">
-    <img src="img/faun_template_ElipseS.webp" alt="Elips Small" id="elipseS">
-  </div>
-
-  <div class="col-6 d-flex flex-column justify-content-center font-weight-bold pl-5">
-    <p id="video" class="text-uppercase ">our newest video</p>
-    <p id="loremB">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-  </div>
-
-  <div class="icon-bar col-3 d-flex flex-column">
-    <a href="#section1" class="effetBar">1</a>
-    <a href="#section2" class="effetBar">2</a>
-    <a href="#section3" class="effetBar">3</a>
-    <a href="#section4" class="effetBar">4</a>
-  </div>
-
-</div>
-
-<div class="progress" style="height: 4px" id="progress">
-  <div class="progress-bar" id="progressBar" role="progressbar" style="width:30%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
-</div> -->
-
-<!-- Section 4 -->
-<!-- <div id="section4" class="h-100 flex-column container-fluid d-flex">
-
-  <div id="barrePhotos" class="container-fluid flex-row d-flex">
-    <div>
-      <a href="photo1.php"><img src="img/faun_template_1.webp" alt="Photo n°1" class="img-fluid"></a>
-    </div>
-    <div>
-      <a href="photo2.php"><img src="img/faun_template_2.webp" alt="Photo n°2" class="img-fluid"></a>
-    </div>
-    <div>
-      <a href="photo3.php"><img src="img/faun_template_3.webp" alt="Photo n°3" class="img-fluid"></a>
-    </div>
-    <div>
-      <a href="photo4.php"><img src="img/faun_template_4.webp" alt="Photo n°4" class="img-fluid"></a>
-    </div>
-  </div>
-
-  <div class="container d-flex flex-column justify-content-center">
-    <p id="wantTo" class="text-uppercase text-center font-weight-bold">want to hire us ?</p>
-    <p id="loremC" class="text-center ">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    <div class="d-flex justify-content-center">
-      <a href="noway.php" class="btn btn-outline-light font-weight-bold text-uppercase"><span id="contactUs">contact with us</span></a>
-    </div>
-  </div>
-
-</div> -->
 
 <!-- Footer -->
 <div id="footer" class="d-flex container-fluid flex-column text-uppercase text-center">

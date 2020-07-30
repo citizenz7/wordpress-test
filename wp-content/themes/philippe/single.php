@@ -13,12 +13,12 @@
         <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3TRAITS.webp" alt="Menu">
       </button>
       <div class="dropdown-menu">
-        <a class="dropdown-item" href="index.php">Accueil</a>
-        <a class="dropdown-item" href="index.php#section1">Us</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php">Accueil</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section1">Us</a>
         <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</a>
-        <a class="dropdown-item" href="index.php#section3">Videos</a>
-        <a class="dropdown-item" href="index.php?page_id=63">Archives</a>
-        <a class="dropdown-item" href="index.php#section4">Contact</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section3">Videos</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php?page_id=63">Archives</a>
+        <a class="dropdown-item" href="<?php bloginfo('wpurl'); ?>/index.php#section4">Contact</a>
       </div>
     </div>
 

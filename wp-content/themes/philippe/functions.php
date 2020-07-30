@@ -38,6 +38,7 @@ $nav = str_replace('<h2 class="screen-reader-text">A</h2>', '<p class="screen-re
 echo $nav;
 }
 
+
 /*
 * On utilise une fonction pour créer notre custom post type 'Séries TV'
 */
@@ -75,11 +76,11 @@ function wpm_custom_post_type() {
 		/*
 		* Différentes options supplémentaires
 		*/
-		'show_in_rest' => true,
+		'show_in_rest'        => true,
 		'hierarchical'        => false,
 		'public'              => true,
 		'has_archive'         => true,
-		'rewrite'			  => array( 'slug' => 'series-tv'),
+		'rewrite'			        => array( 'slug' => 'series-tv'),
 
 	);
 
