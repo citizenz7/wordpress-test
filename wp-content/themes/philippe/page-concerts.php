@@ -22,6 +22,7 @@ Template Name: Modèle de Page Concerts
         <a class="dropdown-item" href="index.php#section1">Us</a>
         <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</<?php bloginfo('template_directory'); ?>a>
         <a class="dropdown-item" href="index.php#section3">Videos</a>
+        <a class="dropdown-item" href="index.php?page_id=63">Archives</a>
         <a class="dropdown-item" href="index.php#section4">Contact</a>
       </div>
     </div>
@@ -33,10 +34,7 @@ Template Name: Modèle de Page Concerts
         <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_LOUPE.webp" alt="Recherche">
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Seek and Destroy !" aria-label="Search">
-          <button class="btn btn-outline-light font-weight-bold my-2 my-sm-0" type="submit">Go !</button>
-        </form>
+        <?php get_search_form(); ?>
       </div>
     </div>
 

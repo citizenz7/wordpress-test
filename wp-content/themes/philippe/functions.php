@@ -12,6 +12,31 @@ function wpb_comment_count() {
   return $message;
 }
 
+// Custom Menus
+function wpb_custom_new_menu() {
+  register_nav_menus(
+    array(
+      'my-custom-menu' => __( 'My Custom Menu' ),
+      'extra-menu' => __( 'Extra Menu' )
+    )
+  );
+}
+add_action( 'init', 'wpb_custom_new_menu' );
+
+
+/* -----------------------------------
+/* Fonction de pagination
+/* ---------------------------------*/
+function the_posts_pagination_p ()  {
+
+$nav = get_the_posts_pagination( array(
+        'prev_text'          => __( 'Article précédent' ),
+        'next_text'          => __( 'Article suivant' ),
+        'screen_reader_text' => __( 'A'  )
+    ) );
+$nav = str_replace('<h2 class="screen-reader-text">A</h2>', '<p class="screen-reader-text px-2">Navigation des articles</p>', $nav);
+echo $nav;
+}
 
 /*
 * On utilise une fonction pour créer notre custom post type 'Séries TV'

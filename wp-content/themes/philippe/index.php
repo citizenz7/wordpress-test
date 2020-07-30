@@ -12,10 +12,12 @@
       <button class="btn" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3TRAITS.webp" alt="Menu">
       </button>
-      <div class="dropdown-menu"  >
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="index.php">Accueil</a>
         <a class="dropdown-item" href="index.php#section1">Us</a>
         <a class="dropdown-item" href="les-concerts-du-coin/">Concerts</a>
         <a class="dropdown-item" href="index.php#section3">Videos</a>
+        <a class="dropdown-item" href="index.php?page_id=63">Archives</a>
         <a class="dropdown-item" href="index.php#section4">Contact</a>
       </div>
     </div>
@@ -27,10 +29,7 @@
         <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_LOUPE.webp" alt="Recherche">
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-        <form class="form-inline">
-          <input class="form-control mr-sm-2" type="search" placeholder="Seek and Destroy !" aria-label="Search">
-          <button class="btn btn-outline-light font-weight-bold my-2 my-sm-0" type="submit">Go !</button>
-        </form>
+        <?php get_search_form(); ?>
       </div>
     </div>
 
@@ -85,7 +84,7 @@
               <?php while(have_posts()) : the_post(); ?>
               <article>
                 <p id="aboutUs" class="d-flex"><?php the_title(); ?></p>
-                <p>Publié le <?php the_time('d/m/Y'); ?><?php if(!is_page()) : ?> dans <?php the_category(', '); ?>, par <?php the_author(); ?><?php endif; ?>
+                <p>Posté le <?php the_date(); ?> dans <?php the_category(', '); ?> par <?php the_author(); ?></p>
                 <p style="font-size:11px;">
                   <?php comments_popup_link('Aucun commentaire pour cet article »', '1 commentaire pour cet article »', '% commentaires pour cet article »'); ?>
                 </p>
@@ -93,20 +92,23 @@
                 <?php the_content(); ?>
                 <?php else : ?>
                 <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>">Lire la suite</a>
+                <p class="text-right"><a href="<?php the_permalink(); ?>" class="btn btn-primary btn-sm active" role="button" aria-pressed="true">>> Lire la suite</a></p>
                 <?php comments_template(); // Par ici les commentaires ?>
                 <?php endif; ?>
               </article>
             <?php endwhile; ?>
           </div>
-          <div id="pagination">
-            <?php echo paginate_links(); ?>
-          </div>
+
+          <!-- Pagination -->
+          <?php
+          the_posts_pagination_p();
+          ?>
+
         <?php else : ?>
           <p>Aucun résultat</p>
         <?php endif; ?>
 
-            <p class="pt-5"><a href="noway.php" class="btn btn-outline-secondary font-weight-bold mb-5 "><span id="checkOur">check our tour</span></a></p>
+            <!--<p class="pt-5"><a href="noway.php" class="btn btn-outline-secondary font-weight-bold mb-5 "><span id="checkOur">check our tour</span></a></p>-->
         </div>
 
         <?php
@@ -163,16 +165,16 @@
 
   <div id="barrePhotos" class="container-fluid flex-row d-flex">
     <div>
-      <a href="photo1.php"><img src="<?php bloginfo('template_directory'); ?>/img/faun_template_1.webp" alt="Photo n°1" class="img-fluid"></a>
+      <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_1.webp" alt="Photo n°1" class="img-fluid">
     </div>
     <div>
-      <a href="photo2.php"><img src="<?php bloginfo('template_directory'); ?>/img/faun_template_2.webp" alt="Photo n°2" class="img-fluid"></a>
+      <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_2.webp" alt="Photo n°2" class="img-fluid">
     </div>
     <div>
-      <a href="photo3.php"><img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3.webp" alt="Photo n°3" class="img-fluid"></a>
+      <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_3.webp" alt="Photo n°3" class="img-fluid">
     </div>
     <div>
-      <a href="photo4.php"><img src="<?php bloginfo('template_directory'); ?>/img/faun_template_4.webp" alt="Photo n°4" class="img-fluid"></a>
+      <img src="<?php bloginfo('template_directory'); ?>/img/faun_template_4.webp" alt="Photo n°4" class="img-fluid">
     </div>
   </div>
 
